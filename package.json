@@ -1,0 +1,29 @@
+{
+  "name": "qubit-core",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "compile": "npx oz compile",
+    "test": "hardhat compile && hardhat test ./test/*.ts",
+    "prettier:contracts": "./node_modules/.bin/prettier --write contracts/**/*.sol",
+    "prettier:scripts": "./node_modules/.bin/prettier --write tests/**/*.ts --write utils/**/*.ts",
+    "prettier": "./node_modules/.bin/prettier --write .",
+    "solhint": "./node_modules/.bin/solhint -f table contracts/**/*.sol",
+    "postinstall": "npx patch-package"
+  },
+  "devDependencies": {
+    "hardhat": "^2.1.2",
+    "hardhat-preprocessor": "^0.1.3",
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts-upgradeable": "^3.4.1",
+    "chai": "^4.3.4",
+    "ethers": "^5.4.7",
+    "ts-node": "^8.10.2",
+    "typescript": "^4.2.4"
+  }
+}
